@@ -85,15 +85,16 @@
     <Component class="javax.swing.JComboBox" name="jRubro">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="3">
-            <StringItem index="0" value="comestible"/>
-            <StringItem index="1" value="limpieza"/>
-            <StringItem index="2" value="perfumer&#xed;a"/>
+          <StringArray count="4">
+            <StringItem index="0" value=""/>
+            <StringItem index="1" value="comestible"/>
+            <StringItem index="2" value="limpieza"/>
+            <StringItem index="3" value="perfumer&#xed;a"/>
           </StringArray>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jRubroKeyReleased"/>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jRubroItemStateChanged"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>

@@ -32,10 +32,10 @@ public class BusquedadPorRubro extends javax.swing.JInternalFrame {
 
         jTituloSecundario.setText("Elija Rubro");
 
-        jRubro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "comestible", "limpieza", "perfumería" }));
-        jRubro.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jRubroKeyReleased(evt);
+        jRubro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "comestible", "limpieza", "perfumería" }));
+        jRubro.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jRubroItemStateChanged(evt);
             }
         });
 
@@ -93,7 +93,7 @@ public class BusquedadPorRubro extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRubroKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jRubroKeyReleased
+    private void jRubroItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jRubroItemStateChanged
         BorrarFilas();
         String rubroSeleccionado = jRubro.getSelectedItem().toString();
 
@@ -107,7 +107,7 @@ public class BusquedadPorRubro extends javax.swing.JInternalFrame {
                 });
             }
         }
-    }//GEN-LAST:event_jRubroKeyReleased
+    }//GEN-LAST:event_jRubroItemStateChanged
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jRubro;

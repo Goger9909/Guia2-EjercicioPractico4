@@ -118,7 +118,7 @@ public class CargarDatos extends javax.swing.JInternalFrame {
         });
 
         jRubro.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRubro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "comestible", "limpieza", "perfumería" }));
+        jRubro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "comestible", "limpieza", "perfumería" }));
         jRubro.setEnabled(false);
 
         jtEliminar.setText("Eliminar");
@@ -267,8 +267,8 @@ public class CargarDatos extends javax.swing.JInternalFrame {
         String descripcion = jDescripcion.getText();
         Double precio = Double.parseDouble(jPrecio.getText());
         int stock = Integer.parseInt(jStock.getText());
-        String categoria = jRubro.getSelectedItem().toString();
-        listaProductos.add(new Producto(codigo, descripcion, precio, stock, categoria));
+        String rubro = jRubro.getSelectedItem().toString();
+        listaProductos.add(new Producto(codigo, descripcion, precio, stock, rubro));
         jCodigo.setText("");
         jDescripcion.setText("");
         jPrecio.setText("");
