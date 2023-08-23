@@ -81,6 +81,11 @@ public static TreeSet<Producto> listaProductos=new TreeSet<>();
         jMenu2.add(jtNombre);
 
         jtPrecio.setText("Por Precio");
+        jtPrecio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtPrecioActionPerformed(evt);
+            }
+        });
         jMenu2.add(jtPrecio);
 
         jMenuBar1.add(jMenu2);
@@ -127,6 +132,15 @@ public static TreeSet<Producto> listaProductos=new TreeSet<>();
         Escritorio.add(BPR);
         Escritorio.moveToFront(BPR);
     }//GEN-LAST:event_jtRubroActionPerformed
+
+    private void jtPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtPrecioActionPerformed
+        Escritorio.removeAll();
+        Escritorio.repaint();
+        BusquedadPorPrecio BPP=new BusquedadPorPrecio();
+        BPP.setVisible(true);
+        Escritorio.add(BPP);
+        Escritorio.moveToFront(BPP);
+    }//GEN-LAST:event_jtPrecioActionPerformed
 
     
     public static void main(String args[]) {

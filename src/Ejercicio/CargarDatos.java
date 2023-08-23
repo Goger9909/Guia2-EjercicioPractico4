@@ -118,7 +118,7 @@ public class CargarDatos extends javax.swing.JInternalFrame {
         });
 
         jRubro.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRubro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "comestible", "limpieza", "perfumería" }));
+        jRubro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "comestible", "limpieza", "perfumería" }));
         jRubro.setEnabled(false);
 
         jtEliminar.setText("Eliminar");

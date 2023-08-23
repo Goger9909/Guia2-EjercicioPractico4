@@ -19,19 +19,19 @@ public class BusquedadPorNombre extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jTitulo = new javax.swing.JLabel();
+        jTituloSecundario = new javax.swing.JLabel();
         jCatacteres = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtProductos = new javax.swing.JTable();
 
         setClosable(true);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel1.setText("Busquedad Por Nombre");
+        jTitulo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jTitulo.setText("Busquedad Por Nombre");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel2.setText("Escriba los primeros caracteres:");
+        jTituloSecundario.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jTituloSecundario.setText("Escriba los primeros caracteres:");
 
         jCatacteres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,10 +65,10 @@ public class BusquedadPorNombre extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(94, 94, 94)
-                        .addComponent(jLabel1))
+                        .addComponent(jTitulo))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2)
+                        .addComponent(jTituloSecundario)
                         .addGap(18, 18, 18)
                         .addComponent(jCatacteres, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -79,10 +79,10 @@ public class BusquedadPorNombre extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(jTitulo)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(jTituloSecundario)
                     .addComponent(jCatacteres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -102,7 +102,6 @@ public class BusquedadPorNombre extends javax.swing.JInternalFrame {
                 prod.getPrecio(),
                 prod.getStock()
                 });
-                
             }
         }
     }//GEN-LAST:event_jCatacteresKeyReleased
@@ -114,9 +113,9 @@ public class BusquedadPorNombre extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField jCatacteres;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jTitulo;
+    private javax.swing.JLabel jTituloSecundario;
     private javax.swing.JTable jtProductos;
     // End of variables declaration//GEN-END:variables
     private void ArmarCabecera() {
