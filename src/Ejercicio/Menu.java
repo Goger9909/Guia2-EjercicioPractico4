@@ -37,6 +37,8 @@ public static TreeSet<Producto> listaProductos=new TreeSet<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        Escritorio.setBackground(new java.awt.Color(51, 102, 255));
+
         javax.swing.GroupLayout EscritorioLayout = new javax.swing.GroupLayout(Escritorio);
         Escritorio.setLayout(EscritorioLayout);
         EscritorioLayout.setHorizontalGroup(
@@ -63,6 +65,11 @@ public static TreeSet<Producto> listaProductos=new TreeSet<>();
         jMenu2.setText("Consultas");
 
         jtRubro.setText("Por Rublo");
+        jtRubro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtRubroActionPerformed(evt);
+            }
+        });
         jMenu2.add(jtRubro);
 
         jtNombre.setText("Por Nombre");
@@ -111,6 +118,15 @@ public static TreeSet<Producto> listaProductos=new TreeSet<>();
         Escritorio.add(BPN);
         Escritorio.moveToFront(BPN);
     }//GEN-LAST:event_jtNombreActionPerformed
+
+    private void jtRubroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtRubroActionPerformed
+        Escritorio.removeAll();
+        Escritorio.repaint();
+        BusquedadPorRubro BPR=new BusquedadPorRubro();
+        BPR.setVisible(true);
+        Escritorio.add(BPR);
+        Escritorio.moveToFront(BPR);
+    }//GEN-LAST:event_jtRubroActionPerformed
 
     
     public static void main(String args[]) {
