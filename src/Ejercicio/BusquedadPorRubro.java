@@ -19,23 +19,23 @@ public class BusquedadPorRubro extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jComboBox = new javax.swing.JComboBox<>();
+        jTitulo = new javax.swing.JLabel();
+        jTituloSecundario = new javax.swing.JLabel();
+        jRubro = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtProductos = new javax.swing.JTable();
 
         setClosable(true);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel1.setText("Busquedad Por Rubro");
+        jTitulo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jTitulo.setText("Busquedad Por Rubro");
 
-        jLabel2.setText("Elija Rubro");
+        jTituloSecundario.setText("Elija Rubro");
 
-        jComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "comestible", "limpieza", "perfumería" }));
-        jComboBox.addKeyListener(new java.awt.event.KeyAdapter() {
+        jRubro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "comestible", "limpieza", "perfumería" }));
+        jRubro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                jComboBoxKeyReleased(evt);
+                jRubroKeyReleased(evt);
             }
         });
 
@@ -60,12 +60,12 @@ public class BusquedadPorRubro extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(94, 94, 94)
-                        .addComponent(jLabel1))
+                        .addComponent(jTitulo))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
-                        .addComponent(jLabel2)
+                        .addComponent(jTituloSecundario)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox, 0, 169, Short.MAX_VALUE)))
+                        .addComponent(jRubro, 0, 169, Short.MAX_VALUE)))
                 .addContainerGap(111, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -77,42 +77,43 @@ public class BusquedadPorRubro extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(jTitulo)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(207, Short.MAX_VALUE))
+                    .addComponent(jTituloSecundario)
+                    .addComponent(jRubro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(129, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(89, 89, 89)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(89, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBoxKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBoxKeyReleased
+    private void jRubroKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jRubroKeyReleased
         BorrarFilas();
+        String rubroSeleccionado = jRubro.getSelectedItem().toString();
+
         for (Producto prod : Menu.listaProductos) {
-            if (prod.getRubro().startsWith(jComboBox.getSelectedItem().toString())) {
+            if (prod.getRubro().equals(rubroSeleccionado)) {
                 model.addRow(new Object[]{
                     prod.getCodigo(),
                     prod.getDescripcion(),
                     prod.getPrecio(),
                     prod.getStock()
                 });
-
             }
         }
-    }//GEN-LAST:event_jComboBoxKeyReleased
+    }//GEN-LAST:event_jRubroKeyReleased
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JComboBox<String> jRubro;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jTitulo;
+    private javax.swing.JLabel jTituloSecundario;
     private javax.swing.JTable jtProductos;
     // End of variables declaration//GEN-END:variables
 private void ArmarCabecera() {

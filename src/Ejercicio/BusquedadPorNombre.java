@@ -33,6 +33,11 @@ public class BusquedadPorNombre extends javax.swing.JInternalFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Escriba los primeros caracteres:");
 
+        jCatacteres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCatacteresActionPerformed(evt);
+            }
+        });
         jCatacteres.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jCatacteresKeyReleased(evt);
@@ -101,6 +106,10 @@ public class BusquedadPorNombre extends javax.swing.JInternalFrame {
             }
         }
     }//GEN-LAST:event_jCatacteresKeyReleased
+
+    private void jCatacteresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCatacteresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCatacteresActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
